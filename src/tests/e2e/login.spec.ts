@@ -1,6 +1,7 @@
-import { test, expect } from '@playwright/test'
+import { expect } from '@playwright/test'
 import { HomePage } from '../../page-objects/HomePage'
 import { LoginPage } from '../../page-objects/LoginPage'
+import { test } from '../../fixture/my-test'
 
 let homePage: HomePage
 let loginPage: LoginPage
@@ -22,8 +23,8 @@ test.describe('Login Test', () => {
   /**
    * Login functionality check with valid credentials to ensure user is successfuly logged in
    */
-  test('Successful login', async () => {
-    await loginPage.doLogin('username', 'password')
+  test('Successful login', async ({ username, password }) => {
+    await loginPage.doLogin(username, password)
     expect(
       await homePage.isTextPresent(homePage.menuText, 'Welcome back test')
     ).toEqual(true)
@@ -32,8 +33,8 @@ test.describe('Login Test', () => {
   /**
    * Login functionality check with invalid credentials to ensure user gets an error message
    */
-  test('Unsuccessful login', async () => {
-    await loginPage.doLogin('username', 'password123')
+  test('Unsuccessful login', async ({ username, password }) => {
+    await loginPage.doLogin(username, 'password123')
     expect(
       await loginPage.isTextPresent(
         loginPage.alertError,
