@@ -20,7 +20,7 @@ test.describe('Visual Test', () => {
     homePage = new HomePage(page)
     loginPage = new LoginPage(page)
     productPage = new ProductPage(page)
-    await page.goto('https://automationteststore.com/')
+    await page.goto('/')
   })
 
   /**

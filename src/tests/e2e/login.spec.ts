@@ -13,7 +13,7 @@ test.describe('Login Test', () => {
    * Launch application before each test and clicks on login button
    */
   test.beforeEach(async ({ page }) => {
-    await page.goto('https://automationteststore.com/')
+    await page.goto('/')
     homePage = new HomePage(page)
     loginPage = new LoginPage(page)
     await homePage.doClick('Login')

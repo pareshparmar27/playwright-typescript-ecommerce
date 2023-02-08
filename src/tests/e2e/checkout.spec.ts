@@ -26,7 +26,7 @@ test.describe('Product checkout Test', () => {
     productPage = new ProductPage(page)
     orderPage = new OrderPage(page)
     guestPage = new GuestPage(page)
-    await page.goto('https://automationteststore.com/')
+    await page.goto('/')
   })
 
   /**
