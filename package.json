@@ -1,0 +1,23 @@
+{
+  "name": "playwright-typescript-ecommerce",
+  "version": "1.0.0",
+  "description": "Automation of ecommerce application",
+  "main": "index.js",
+  "scripts": {
+    "e2e": "npx playwright test --config=e2e.config.ts --project=chromium",
+    "login": "npx playwright test login.spec.ts --config=e2e.config.ts --project=chromium",
+    "home": "npx playwright test home.spec.ts --config=e2e.config.ts --project=chromium",
+    "checkout": "npx playwright test checkout.spec.ts --config=e2e.config.ts --project=chromium",
+    "visual": "npx playwright test visual.spec.ts --config=visual.config.ts --project=chromium"
+  },
+  "author": "Paresh Parmar",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "^1.30.0",
+    "node-fetch": "^3.3.0",
+    "prettier": "^2.8.3"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
+  }
+}
