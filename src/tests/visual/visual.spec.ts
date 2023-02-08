@@ -24,6 +24,13 @@ test.describe('Visual Test', () => {
   })
 
   /**
+   * Close browser after each test run
+   */
+  test.afterEach(async () => {
+    page.close()
+  })
+
+  /**
    * checks look and feel of entire home page
    */
   test('Home page snapshot', async () => {
