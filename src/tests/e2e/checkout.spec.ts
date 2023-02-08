@@ -1,4 +1,5 @@
-import { test, expect, Page } from '@playwright/test'
+import { expect, Page } from '@playwright/test'
+import { test } from '../../fixture/my-test'
 import { GuestPage } from '../../page-objects/GuestPage'
 import { HomePage } from '../../page-objects/HomePage'
 import { LoginPage } from '../../page-objects/LoginPage'
@@ -32,7 +33,10 @@ test.describe('Product checkout Test', () => {
   /**
    * Checkout and order shampoo product with register account
    */
-  test('Order a shampoo product with register account', async () => {
+  test('Order a shampoo product with register account', async ({
+    username,
+    password,
+  }) => {
     await homePage.search('Hair Care', 'Shampoo')
 
     expect(await homePage.getSubCategoryHeading()).toBe('Shampoo')
@@ -41,7 +45,7 @@ test.describe('Product checkout Test', () => {
     await productPage.getCart().first().click()
     await homePage.doClick('Checkout')
     await page.getByLabel('Register Account').check()
-    await loginPage.doLogin('username', 'password')
+    await loginPage.doLogin(username, password)
     await orderPage.doClick('Confirm Order')
 
     expect(await orderPage.getOrderConfirmation()).toContain(

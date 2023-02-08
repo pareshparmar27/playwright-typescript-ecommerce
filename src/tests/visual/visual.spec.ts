@@ -1,11 +1,9 @@
 import { test, expect, Page } from '@playwright/test'
 import { HomePage } from '../../page-objects/HomePage'
-import { LoginPage } from '../../page-objects/LoginPage'
 import { ProductPage } from '../../page-objects/ProductPage'
 
 let page: Page
 let homePage: HomePage
-let loginPage: LoginPage
 let productPage: ProductPage
 
 /**
@@ -18,16 +16,8 @@ test.describe('Visual Test', () => {
   test.beforeEach(async ({ browser }) => {
     page = await browser.newPage()
     homePage = new HomePage(page)
-    loginPage = new LoginPage(page)
     productPage = new ProductPage(page)
     await page.goto('/')
-  })
-
-  /**
-   * Close browser after each test run
-   */
-  test.afterEach(async () => {
-    page.close()
   })
 
   /**
