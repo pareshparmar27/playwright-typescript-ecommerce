@@ -13,7 +13,7 @@ test.describe('Home Test', () => {
    */
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage()
-    await page.goto('https://automationteststore.com/')
+    await page.goto('/')
     homePage = new HomePage(page)
   })
 

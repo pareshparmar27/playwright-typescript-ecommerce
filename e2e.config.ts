@@ -5,6 +5,7 @@ const config: PlaywrightTestConfig = {
   retries: 0,
   testDir: 'src/tests/e2e',
   use: {
+    baseURL: 'https://automationteststore.com/',
     headless: false,
     viewport: { width: 1280, height: 720 },
     actionTimeout: 15000,
