@@ -8,7 +8,8 @@
     "login": "npx playwright test login.spec.ts --config=e2e.config.ts --project=chromium",
     "home": "npx playwright test home.spec.ts --config=e2e.config.ts --project=chromium",
     "checkout": "npx playwright test checkout.spec.ts --config=e2e.config.ts --project=chromium",
-    "visual": "npx playwright test visual.spec.ts --config=visual.config.ts --project=chromium"
+    "visual": "npx playwright test visual.spec.ts --config=visual.config.ts --project=chromium",
+    "api": "npx playwright test api.spec.ts --config=api.config.ts"
   },
   "author": "Paresh Parmar",
   "license": "ISC",
