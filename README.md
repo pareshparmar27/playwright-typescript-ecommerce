@@ -9,10 +9,9 @@
 
 ### Run test (default chromium)
 
-1. run all e2e tests "npm run e2e"
-2. run all visual tests "npm run visual"
-3. run only login test "npm run login"
-4. run only checkout test "npm run checkout"
-
-note: you can run test on different browsers. lets say to run all test on firefox
-"npx playwright test --headed --browser=firefox"
+1. "npm run e2e" for all e2e tests
+2. "npm run visual" for all visual tests
+3. "npm run api" for all api tests
+4. "npm run login" for only login test
+5. "npm run checkout" for only checkout test
+6. "npm run home" for only home test
