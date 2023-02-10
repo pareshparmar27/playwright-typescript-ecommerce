@@ -23,7 +23,7 @@ test.describe('Home Test', () => {
   test('Search shoes under apparel & accessories category', async () => {
     await homePage.search('Apparel & accessories', 'Shoes')
     expect(await homePage.getSubCategoryHeading()).toBe('Shoes')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -32,7 +32,7 @@ test.describe('Home Test', () => {
   test('Search eyes products under makeup category', async () => {
     await homePage.search('Makeup', 'Eyes')
     expect(await homePage.getSubCategoryHeading()).toBe('Eyes')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -41,7 +41,7 @@ test.describe('Home Test', () => {
   test('Search sun cream under skincare category', async () => {
     await homePage.search('Skincare', 'Sun')
     expect(await homePage.getSubCategoryHeading()).toBe('Sun')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -50,7 +50,7 @@ test.describe('Home Test', () => {
   test('Search womens perfume under fragrance category', async () => {
     await homePage.search('Fragrance', 'Women')
     expect(await homePage.getSubCategoryHeading()).toBe('Women')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -59,7 +59,7 @@ test.describe('Home Test', () => {
   test('Search body & shower under men category', async () => {
     await homePage.search('Men', 'Body & Shower')
     expect(await homePage.getSubCategoryHeading()).toBe('Body & Shower')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -68,7 +68,7 @@ test.describe('Home Test', () => {
   test('Search shampoos under hair care category', async () => {
     await homePage.search('Hair Care', 'Shampoo')
     expect(await homePage.getSubCategoryHeading()).toBe('Shampoo')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 
   /**
@@ -77,6 +77,6 @@ test.describe('Home Test', () => {
   test('Search audio cd under books category', async () => {
     await homePage.search('Books', 'Audio CD')
     expect(await homePage.getSubCategoryHeading()).toBe('Audio CD')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
   })
 })
