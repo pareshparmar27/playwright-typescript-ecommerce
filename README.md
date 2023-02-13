@@ -3,7 +3,7 @@
 ### Setup & Installation
 
 1. Clone git repository or download zip file
-2. Go to playwright-ecommerce folder
+2. Go to playwright-typescript-ecommerce folder
 3. run command as "npm install" to install all dependencies
 4. "npx playwright install" to install all browsers for playwright testing
 
