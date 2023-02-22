@@ -40,7 +40,7 @@ test.describe('Product checkout Test', () => {
     await homePage.search('Hair Care', 'Shampoo')
 
     expect(await homePage.getSubCategoryHeading()).toBe('Shampoo')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
 
     await productPage.getCart().first().click()
     await homePage.doClick('Checkout')
@@ -60,7 +60,7 @@ test.describe('Product checkout Test', () => {
     await homePage.search('Skincare', 'Eyes')
 
     expect(await homePage.getSubCategoryHeading()).toBe('Eyes')
-    expect(await homePage.getProductCount()).toBeGreaterThan(0)
+    expect((await homePage.getProducts()).length).toBeGreaterThan(0)
 
     await productPage.getCart().first().click()
     await homePage.doClick('Checkout')
